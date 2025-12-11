@@ -151,4 +151,11 @@ class ObjectCreationTest extends TestCase
             'address' => 'potatoe',
         ]);
     }
+
+    public function test_hinted_scalars()
+    {
+        $obj = WithUnionParam::build(['value' => 12]);
+
+        $this->assertInstanceOf(WithUnionParam::class, $obj);
+    }
 }

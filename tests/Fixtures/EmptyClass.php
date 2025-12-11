@@ -2,7 +2,7 @@
 
 namespace Tests\Fixtures;
 
-class EmptyClass
+readonly class EmptyClass
 {
     //
 }

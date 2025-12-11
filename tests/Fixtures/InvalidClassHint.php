@@ -4,12 +4,12 @@ namespace Tests\Fixtures;
 
 use Hpkns\Objkit\Buildable;
 
-class InvalidClassHint
+readonly class InvalidClassHint
 {
     use Buildable;
 
     public function __construct(
-        readonly public NotARealClass $value,
+        public NotARealClass $value,
     )
     {
         //

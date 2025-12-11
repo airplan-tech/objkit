@@ -4,16 +4,16 @@ namespace Tests\Fixtures;
 
 use Hpkns\Objkit\Buildable;
 
-class Address
+readonly class Address
 {
     use Buildable;
 
     public function __construct(
-        readonly public array       $streetAddress,
-        readonly public ?string     $postalCode = null,
-        readonly public ?string     $city = null,
-        readonly public ?Country    $country = null,
-        readonly public AddressType $type = AddressType::Business
+        public array       $streetAddress,
+        public ?string     $postalCode = null,
+        public ?string     $city = null,
+        public ?Country    $country = null,
+        public AddressType $type = AddressType::Business
     )
     {
         //

@@ -4,13 +4,13 @@ namespace Tests\Fixtures;
 
 use Hpkns\Objkit\Buildable;
 
-class ListItem
+readonly class ListItem
 {
     use Buildable;
 
     public function __construct(
-        readonly public ?self $previous,
-        public                $value,
+        public ?self $previous,
+        public mixed $value,
     )
     {
         //

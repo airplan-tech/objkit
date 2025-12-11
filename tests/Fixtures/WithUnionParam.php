@@ -5,12 +5,12 @@ namespace Tests\Fixtures;
 use Hpkns\Objkit\Buildable;
 use JsonSerializable;
 
-class WithUnionParam
+readonly class WithUnionParam
 {
     use Buildable;
 
     public function __construct(
-        public readonly JsonSerializable|int|string $value,
+        public JsonSerializable|int|string $value,
     )
     {
         //
